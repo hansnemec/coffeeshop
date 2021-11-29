@@ -27,6 +27,11 @@ public class Main {
 			while ((line = scanner.nextLine()) != null) {
 				line = line.trim().toLowerCase(); // to be absolutely sure
 				
+				if (line.isEmpty()) {
+					printPrompt();
+					continue;
+				}
+				
 				if ("close".equals(line)) {
 					System.out.println("Bye ;-)");
 					return;
